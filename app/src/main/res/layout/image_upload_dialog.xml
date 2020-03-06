@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/transparent_background">
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+
+        <!--<android.support.constraint.ConstraintLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent">-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/chooseImage"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:visibility="visible"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/textView6"-->
+                <!--app:srcCompat="@drawable/user" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/textView6"-->
+                <!--android:layout_width="300dp"-->
+                <!--android:layout_height="?attr/actionBarSize"-->
+                <!--android:background="@drawable/custom_team_layout_border"-->
+                <!--android:fontFamily="@font/roboto_black"-->
+                <!--android:gravity="center"-->
+                <!--android:text="Upload Image"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:textSize="20sp"-->
+                <!--android:layout_marginTop="4dp"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+            <!--<Button-->
+                <!--android:id="@+id/btn_upload"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:text="Upload"-->
+                <!--app:layout_constraintBottom_toBottomOf="parent"-->
+                <!--app:layout_constraintEnd_toEndOf="parent"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/chooseImage" />-->
+
+            <!--<ProgressBar-->
+                <!--android:id="@+id/upload_progress"-->
+                <!--style="?android:attr/progressBarStyle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="8dp"-->
+                <!--android:layout_marginTop="8dp"-->
+                <!--android:layout_marginEnd="8dp"-->
+                <!--android:layout_marginBottom="8dp"-->
+                <!--app:layout_constraintBottom_toBottomOf="@+id/btn_upload"-->
+                <!--app:layout_constraintEnd_toEndOf="@+id/chooseImage"-->
+                <!--app:layout_constraintStart_toStartOf="parent"-->
+                <!--app:layout_constraintTop_toBottomOf="@+id/textView6" />-->
+        <!--</android.support.constraint.ConstraintLayout>-->
+    <!--</ScrollView>-->
+
+    <TextView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:fontFamily="@font/roboto_regular"
+        android:gravity="left"
+        android:padding="4dp"
+        android:text="Back"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/roboto_regular"
+        android:padding="4dp"
+        android:text="Profile Picture"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/back_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toEndOf="@+id/back_btn"
+        app:layout_constraintTop_toTopOf="@+id/back_btn"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/chooseImage"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_margin="32dp"
+        android:src="@drawable/ic_avatar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/back_btn"
+        app:layout_constraintTop_toBottomOf="@+id/back_btn"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <Button
+        android:id="@+id/btn_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_team_border"
+        android:fontFamily="@font/roboto_regular"
+        android:text="Upload"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/chooseImage"
+        app:layout_constraintStart_toStartOf="@+id/chooseImage"
+        app:layout_constraintTop_toBottomOf="@+id/chooseImage" />
+
+    <ProgressBar
+        android:id="@+id/upload_progress"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/chooseImage"
+        app:layout_constraintEnd_toEndOf="@+id/chooseImage"
+        app:layout_constraintStart_toStartOf="@+id/chooseImage"
+        app:layout_constraintTop_toTopOf="@+id/chooseImage" />
+
+</android.support.constraint.ConstraintLayout>

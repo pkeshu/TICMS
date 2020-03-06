@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_root_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".Notification.PushNotification.AllNotification">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@color/colorPrimary"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/back_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp"
+
+            android:gravity="center"
+            android:text="Back"
+            android:textSize="18sp"
+            android:drawableLeft="@drawable/ic_keyboard_arrow_left_black_24dp"
+            android:layout_gravity="left"
+            android:padding="4dp"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/user_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/user_image_view"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/allnotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="All Notification"
+            android:textSize="18sp"
+            android:layout_gravity="center_horizontal"
+            android:padding="4dp"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/user_image_view"
+            app:layout_constraintEnd_toEndOf="@+id/user_image_view"
+            app:layout_constraintHorizontal_bias="0.042"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/notification_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="12dp"
+            android:layout_marginRight="8dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_notification_icon" />
+
+        <TextView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/notification_badge"
+            android:layout_gravity="right|top"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/notification_backround"
+            android:gravity="center"
+            android:padding="3dp"
+            android:textColor="#ffffff"
+            android:text="1"
+            android:textSize="10sp"
+            android:visibility="gone"/>
+
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingTop="5dp"
+        android:background="@drawable/marknotification_as_readbackground"
+        android:gravity="center_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout">
+
+        <TextView
+            android:id="@+id/notificationread"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:gravity="center_horizontal"
+            android:paddingTop="4dp"
+            android:textColor="@drawable/textview_click_color"
+            android:text="@string/notification_read"
+            />
+
+    </LinearLayout>
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        >
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginTop="51dp"
+
+            >
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_notification"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorWhite"
+                android:clipToPadding="false"
+                tools:listitem="@layout/list_view_notification"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </FrameLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/send_new_notification_floating_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="32dp"
+        android:src="@drawable/ic_send_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

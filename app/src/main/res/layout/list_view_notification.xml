@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    android:layout_marginBottom="4dp"
+    >
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/notification_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_seen_notification_item_bg"
+        android:padding="4dp">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:maxLines="1"
+            android:maxLength="20"
+            android:ellipsize="end"
+            android:text="Notification Title"
+            android:textColor="#333333"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/counsellor_image"
+            app:layout_constraintTop_toBottomOf="@+id/counsellor_name" />
+
+        <TextView
+            android:id="@+id/full_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_below="@id/notification_title"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="2dp"
+            android:text="Hello Surya. How do you do??? Welcome to the test app. You can do anything whatever you want. This is just for the test notification...."
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/date_of_counsil"
+            app:layout_constraintHorizontal_bias="0.323"
+            app:layout_constraintStart_toStartOf="@+id/counsellor_image"
+            app:layout_constraintTop_toBottomOf="@+id/notification_title" />
+
+
+        <TextView
+            android:id="@+id/counsellor_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/notification_title"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/roboto_regular"
+            android:maxLines="1"
+            android:padding="2dp"
+            android:text="Notification Body"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/date_of_counsil"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/counsellor_image"
+            app:layout_constraintTop_toBottomOf="@+id/notification_title" />
+
+
+
+        <TextView
+            android:id="@+id/date_of_counsil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/counsellor_remarks"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:text="2017-03-15"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            app:layout_constraintBaseline_toBaselineOf="@+id/counsellor_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.951"
+            app:layout_constraintStart_toEndOf="@+id/counsellor_name" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/counsellor_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_below="@+id/date_of_counsil"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/counsellor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/date_of_counsil"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toEndOf="@+id/counsellor_image"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Sender Name"
+            android:textColor="@color/text_color"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/counsellor_image"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notification_reply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Response"
+            android:textColor="@color/colorfade"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/notification_title"
+            app:layout_constraintEnd_toEndOf="@+id/date_of_counsil"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/notification_title"
+            app:layout_constraintTop_toTopOf="@+id/notification_title"
+            app:layout_constraintVertical_bias="1.0" />
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
+
+</LinearLayout>

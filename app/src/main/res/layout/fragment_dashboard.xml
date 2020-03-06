@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f5f5"
+    android:fitsSystemWindows="true"
+    tools:context="com.imaginology.texas.Dashboard.DashboardFragment"
+    tools:openDrawer="start">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/drawer_layout_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/users"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="@+id/textView5"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="User icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_users_icon"
+            app:layout_constraintEnd_toStartOf="@+id/students"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="8dp"
+            android:text="Users"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/users"
+            app:layout_constraintStart_toStartOf="@+id/users"
+            app:layout_constraintTop_toBottomOf="@+id/users" />
+
+        <ImageView
+            android:id="@+id/students"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="Students icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_student_icon"
+            app:layout_constraintEnd_toStartOf="@+id/teachers"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/users"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:layout_centerHorizontal="true"
+            android:text="Students"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/students"
+            app:layout_constraintStart_toStartOf="@+id/students" />
+
+
+        <ImageView
+            android:id="@+id/teachers"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/textView12"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="Teacher icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_teacher_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/students"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="Teachers"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="@+id/teachers"
+            app:layout_constraintHorizontal_bias="0.65"
+            app:layout_constraintStart_toStartOf="@+id/teachers" />
+
+
+        <ImageView
+            android:id="@+id/courses1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="Course icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_course_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/routine"
+            app:layout_constraintEnd_toStartOf="@+id/subjects"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/routine"
+            app:layout_constraintTop_toBottomOf="@+id/textView11"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Courses"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView14"
+            app:layout_constraintEnd_toEndOf="@+id/courses1"
+            app:layout_constraintHorizontal_bias="0.571"
+            app:layout_constraintStart_toStartOf="@+id/courses1" />
+
+        <ImageView
+            android:id="@+id/routine"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="Routine icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_routine"
+            app:layout_constraintEnd_toStartOf="@+id/courses1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="Routine"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="@+id/routine"
+            app:layout_constraintStart_toStartOf="@+id/routine"
+            app:layout_constraintTop_toBottomOf="@+id/routine" />
+
+        <ImageView
+            android:id="@+id/subjects"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignStart="@+id/teachers"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_circular_image_view_border"
+            android:contentDescription="Subject icon"
+            android:foreground="@drawable/custom_ripple_effect"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_exam_icon"
+            app:layout_constraintBottom_toBottomOf="@+id/courses1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/courses1"
+            app:layout_constraintTop_toBottomOf="@+id/textView12"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            android:text="Subjects"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="@+id/subjects" />
+
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/bottomnavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textAlignment="center"
+            app:itemIconTint="#ffffff"
+            app:itemTextColor="#ffffff"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu="@menu/bottomnavigation_menu">
+
+        </android.support.design.widget.BottomNavigationView>
+    </android.support.constraint.ConstraintLayout>
+
+    <include layout="@layout/content_main" />
+
+</android.support.constraint.ConstraintLayout>
+

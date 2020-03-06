@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressFragment"
+    android:orientation="horizontal">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/userdetailsbackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/temp_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/costum_tab_details_background"
+            android:fontFamily="@font/roboto_medium"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.023"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/label_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Zone:"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/temp_address"
+            app:layout_constraintHorizontal_bias="0.028"
+            app:layout_constraintStart_toStartOf="@+id/temp_address"
+            app:layout_constraintTop_toBottomOf="@+id/temp_address" />
+
+        <TextView
+            android:id="@+id/add_zone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Not Available"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_zone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.024"
+            app:layout_constraintStart_toEndOf="@+id/label_zone"
+            app:layout_constraintTop_toTopOf="@+id/label_zone" />
+
+        <TextView
+            android:id="@+id/label_district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="District:"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/label_zone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_zone"
+            app:layout_constraintTop_toBottomOf="@+id/label_zone" />
+
+        <TextView
+            android:id="@+id/add_district"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Not Available"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_district"
+            app:layout_constraintEnd_toEndOf="@+id/add_zone"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/label_district"
+            app:layout_constraintTop_toTopOf="@+id/label_district" />
+
+        <TextView
+            android:id="@+id/label_vdc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="VDC:"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/label_district"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_district"
+            app:layout_constraintTop_toBottomOf="@+id/label_district" />
+
+        <TextView
+            android:id="@+id/add_vdc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Not Available"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_vdc"
+            app:layout_constraintEnd_toEndOf="@+id/add_district"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/label_vdc"
+            app:layout_constraintTop_toTopOf="@+id/label_vdc"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/label_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Type:"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/label_vdc"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_vdc"
+            app:layout_constraintTop_toBottomOf="@+id/label_vdc" />
+
+        <TextView
+            android:id="@+id/add_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Not Available"
+            android:textColor="@color/colorBlack"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/label_type"
+            app:layout_constraintEnd_toEndOf="@+id/add_vdc"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/label_type"
+            app:layout_constraintTop_toTopOf="@+id/label_type"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_type" />
+    </android.support.constraint.ConstraintLayout>
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="1.0"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/constraintLayout">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/per_address"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:background="@drawable/custom_team_layout_border"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="PERMANENT ADDRESS"-->
+            <!--android:textColor="@color/colorWhite"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.023"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/label_zone_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="Zone:"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/per_address"-->
+            <!--app:layout_constraintHorizontal_bias="0.028"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/per_address"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/per_address" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/add_zone_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="4dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="Not Available"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/label_zone_per"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintHorizontal_bias="0.024"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/label_zone_per"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/label_zone_per" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/label_district_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="District:"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/label_zone_per"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/label_zone_per"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/label_zone_per" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/add_district_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="Not Available"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/label_district_per"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/add_zone_per"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/label_district_per"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/label_district_per" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/label_vdc_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="VDC:"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/label_district_per"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toStartOf="@+id/label_district_per"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/label_district_per" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/add_vdc_per"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginStart="8dp"-->
+            <!--android:layout_marginEnd="8dp"-->
+            <!--android:fontFamily="@font/roboto_medium"-->
+            <!--android:text="Not Available"-->
+            <!--android:textColor="@color/colorBlack"-->
+            <!--android:textSize="16sp"-->
+            <!--app:layout_constraintBottom_toBottomOf="@+id/label_vdc_per"-->
+            <!--app:layout_constraintEnd_toEndOf="@+id/add_district_per"-->
+            <!--app:layout_constraintHorizontal_bias="0.0"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/label_vdc_per"-->
+            <!--app:layout_constraintTop_toTopOf="@+id/label_vdc_per"-->
+            <!--app:layout_constraintVertical_bias="0.0" />-->
+
+
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Counseling.CreateStudentCounseling.CreateCounselingFragment"
+    android:id="@+id/back_couns_layout">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp">
+
+
+            <ScrollView
+                android:id="@+id/scrollview123"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RelativeLayout
+                    android:id="@+id/counseling_details_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/label_counseling_fullname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Full Name"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_fullname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_fullname"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="FullName"
+                        android:textSize="14sp"
+                        android:textStyle="italic"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                         />
+
+                    <TextView
+                        android:id="@+id/label_counseling_email"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_fullname"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Email"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_email"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Email"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/label_counseling_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_email"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Phone No."
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_phone"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Phone No."
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/label_counseling_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_phone"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Address"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_address"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Address"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/label_counseling_shoolname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_address"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="School/College Name"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_shoolname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_shoolname"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="School\College"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+                    <TextView
+                        android:id="@+id/label_counseling_dender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_shoolname"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Gender"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <Spinner
+                        android:id="@+id/spnr_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/custom_spinner_design"
+                        android:padding="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+                        android:layout_below="@+id/label_counseling_dender"/>
+
+                    <TextView
+                        android:id="@+id/label_counseling_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spnr_gender"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Course"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <!--<EditText-->
+                    <!--android:id="@+id/counseling_course"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/label_counseling_course"-->
+                    <!--android:layout_marginStart="16dp"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--android:layout_marginEnd="16dp"-->
+                    <!--android:fontFamily="@font/roboto_regular"-->
+                    <!--android:hint="Course"-->
+                    <!--android:inputType="text"-->
+                    <!--android:textColor="@color/colorBlack"-->
+                    <!--android:textSize="16sp" />-->
+                    <Spinner
+                        android:id="@+id/spnr_class_routine_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:spinnerMode="dropdown"
+                        android:background="@drawable/custom_spinner_design"
+                        android:padding="8dp"
+                        app:layout_constraintBottom_toTopOf="@+id/progress_bar"
+                        android:layout_below="@+id/label_counseling_course"/>
+
+                    <TextView
+                        android:id="@+id/label_counseling_total_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/spnr_class_routine_course"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Total Fee"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_total_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_total_fee"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:inputType="text"
+                        android:hint="Total Fee"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/label_counseling_counsellor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_total_fee"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Counsellor"
+                        android:visibility="gone"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_counsellor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_counsellor"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Counsellor"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <TextView
+                        android:id="@+id/label_counseling_recomendator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/counseling_counsellor"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Recommendator"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/counseling_recomendator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/label_counseling_recomendator"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Recomendator"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14sp"
+                        android:textStyle="italic" />
+
+                    <ProgressBar
+                        android:id="@+id/counselling_progress_bar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="146dp"
+                        android:layout_marginTop="258dp"
+                        android:layout_marginEnd="158dp" />
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+        <Button
+            android:id="@+id/couns_save_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"
+            android:background="@drawable/custom_change_password_btn"
+            android:fontFamily="@font/roboto_regular"
+            android:text="        Create        "
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+    </android.support.constraint.ConstraintLayout>
+
+
+</FrameLayout>

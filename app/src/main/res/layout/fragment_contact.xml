@@ -1,0 +1,221 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:layout_height="match_parent"
+    tools:context=".NavigationViewItems.Contact.ContactFragment">
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/label_contactus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="About"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/colorBlack"
+        android:textSize="40sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/emailLayoutID"
+        android:layout_width="match_parent"
+        android:layout_below="@id/label_contactus"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        android:padding="4dp"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/label_email"
+          android:layout_width="0dp"
+          android:layout_weight="0.4"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/label_contactus"
+          android:drawableLeft="@drawable/ic_email_black_24dp"
+          android:drawablePadding="5dp"
+          android:fontFamily="@font/roboto_regular"
+          android:text="By Email:"
+          android:textColor="@color/colorBlack"
+          android:textSize="18sp"
+          />
+
+      <TextView
+          android:id="@+id/textView"
+          android:layout_width="0dp"
+          android:layout_weight="0.6"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_regular"
+          android:autoLink="email"
+          android:drawablePadding="5dp"
+          android:text="info@texasintl.edu.np"
+          android:textColorLink="@color/colorPrimary"
+          android:textSize="18sp"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/phoneLayoutID"
+        android:layout_width="match_parent"
+        android:layout_below="@id/emailLayoutID"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/label_phone"
+          android:layout_width="0dp"
+          android:layout_gravity="center"
+          android:layout_weight="0.4"
+          android:fontFamily="@font/roboto_regular"
+          android:layout_height="wrap_content"
+          android:layout_below="@id/label_email"
+          android:drawableLeft="@drawable/ic_local_phone_black_24dp"
+          android:drawablePadding="5dp"
+          android:text="By Phone"
+          android:textColor="@color/colorBlack"
+          android:textSize="18sp"
+          />
+
+      <TextView
+          android:id="@+id/textView2"
+          android:layout_width="0dp"
+          android:layout_gravity="center"
+          android:layout_weight="0.6"
+          android:layout_height="wrap_content"
+          android:autoLink="phone"
+          android:fontFamily="@font/roboto_regular"
+          android:drawablePadding="5dp"
+          android:text="+977014479017\n+977014490670"
+          android:textColorLink="@color/colorPrimary"
+          android:textSize="18sp"
+          />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/addressLayoutID"
+        android:layout_below="@id/phoneLayoutID"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/label_address"
+          android:layout_width="0dp"
+          android:layout_gravity="center"
+          android:layout_weight="0.4"
+          android:layout_height="wrap_content"
+          android:fontFamily="@font/roboto_regular"
+          android:drawableLeft="@drawable/ic_location_on_black_24dp"
+          android:drawablePadding="5dp"
+          android:text="Address"
+          android:textColor="@color/colorBlack"
+          android:textSize="18sp"
+          />
+
+      <TextView
+          android:id="@+id/textView4"
+          android:layout_width="0dp"
+          android:layout_weight="0.6"
+          android:layout_height="wrap_content"
+          android:autoLink="map"
+          android:fontFamily="@font/roboto_regular"
+          android:layout_gravity="center"
+          android:drawablePadding="5dp"
+          android:text="Mitrapark Chabahil \nKathmandu"
+          android:textSize="18sp"
+          />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/visitLayoutID"
+        android:layout_below="@id/addressLayoutID"
+        android:layout_width="match_parent"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:paddingBottom="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:layout_height="wrap_content">
+
+      <TextView
+          android:id="@+id/label_web"
+          android:layout_width="0dp"
+          android:layout_weight="0.4"
+          android:fontFamily="@font/roboto_regular"
+          android:layout_height="wrap_content"
+          android:drawableLeft="@drawable/ic_web_black_24dp"
+          android:drawablePadding="5dp"
+          android:text="Visit"
+          android:textColor="@color/colorBlack"
+          android:textSize="18sp"
+          />
+
+      <TextView
+          android:id="@+id/textView3"
+          android:layout_width="0dp"
+          android:layout_weight="0.6"
+          android:fontFamily="@font/roboto_regular"
+          android:layout_height="wrap_content"
+          android:autoLink="web"
+          android:drawablePadding="5dp"
+          android:padding="2dp"
+          android:text="www.texasintl.edu.np"
+          android:textColorLink="@color/colorPrimary"
+          android:textSize="18sp"
+
+          />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/wv_contact_us_embd_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_below="@id/visitLayoutID"
+        >
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/version_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wv_contact_us_embd_map"
+        android:hint="Version"
+        android:layout_marginBottom="8dp"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/roboto_regular"
+        android:textSize="12sp"
+        android:textColor="@color/colorBlack"
+
+        />
+
+
+
+  </RelativeLayout>
+
+
+
+</ScrollView>

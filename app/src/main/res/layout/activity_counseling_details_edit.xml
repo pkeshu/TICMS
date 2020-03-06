@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Counseling.ProcessCounseling.CounselStudent"
+    android:id="@+id/root_layout">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="212dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="118dp"
+            android:layout_height="118dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/custom_image_border_for_counselling"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/counseling_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="yourname@gmail.com"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+        <TextView
+            android:id="@+id/counseling_full_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Keshar Paudel"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/counseling_email"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView" />
+
+        <TextView
+            android:id="@+id/counseling_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="+977-9801234567"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView"
+            app:layout_constraintTop_toBottomOf="@+id/counseling_email" />
+
+        <TextView
+            android:id="@+id/edit_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:drawableLeft="@drawable/close"
+            android:gravity="center"
+            android:padding="4dp"
+            android:text="EXIT"
+            android:textColor="@color/colorWhite"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/counsel"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginStart="8dp"-->
+        <!--android:layout_marginEnd="8dp"-->
+        <!--android:text="Counsel Student  Detail"-->
+        <!--android:textSize="20sp"-->
+        <!--android:textColor="@color/colorWhite"-->
+        <!--android:fontFamily="@font/roboto_regular"-->
+        <!--app:layout_constraintBottom_toBottomOf="@+id/back_txt"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toEndOf="@+id/back_txt"-->
+        <!--app:layout_constraintTop_toTopOf="@+id/back_txt" />-->
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:elevation="2dp"
+        android:padding="2dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/constraintLayout5"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="28dp">
+
+            <ScrollView
+                android:id="@+id/scrollview123"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/counseling_details_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/label_counseling_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Address"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/counseling_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Kalopul Kathmandu, Nepal"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_address"
+                        />
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/sep1"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/counseling_address"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/label_counseling_shoolname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="School/College Name"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/sep1"
+                        android:visibility="gone"
+                        />
+                    <TextView
+                        android:id="@+id/counseling_shoolname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Texas Intl HSS"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_shoolname"
+                        android:visibility="gone"/>
+                    <View
+                        android:id="@+id/sep2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/counseling_shoolname"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="2dp"
+                        android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/label_counseling_course"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Course"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/sep2"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/counseling_course"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="10+2 Science"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_course"
+                        android:visibility="gone"/>
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/sep3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/counseling_course"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/label_counseling_total_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Total Fee"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/sep3"
+                        />
+
+                    <EditText
+                        android:id="@+id/counseling_total_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="30000"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:inputType="text"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_total_fee"
+                        />
+                    <TextView
+                        android:id="@+id/label_counseling_negotiated_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Discount Fee"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/counseling_total_fee"
+                        />
+
+                    <EditText
+                        android:id="@+id/counseling_negotiated_fee"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="discount fee"
+                        android:layout_marginEnd="16dp"
+                        android:inputType="text"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_negotiated_fee"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/label_counseling_counsellor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Counsellor"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/counseling_negotiated_fee"
+                        />
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/counseling_counsellor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Keshar Paudel"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_counsellor"
+                        />
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/sep4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/counseling_counsellor"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/label_counseling_recomendator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Recommendator"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/sep4"
+                        />
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/counseling_recomendator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Yubaraj Kalathoki"
+                        android:layout_marginEnd="16dp"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_recomendator"
+                        />
+                    <View
+                        android:visibility="gone"
+                        android:id="@+id/sep5"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/counseling_recomendator"
+                        android:background="@android:color/darker_gray"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginTop="2dp"/>
+                    <TextView
+                        android:id="@+id/label_counseling_remarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="Remark"
+                        android:textColor="@color/colorfade"
+                        android:textSize="16sp"
+                        android:layout_below="@+id/sep5"
+                        />
+                    <EditText
+                        android:id="@+id/counseling_remarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/roboto_regular"
+                        android:hint="Remarks"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_below="@+id/label_counseling_remarks"
+                        />
+
+
+
+                    <ProgressBar
+                        android:id="@+id/counselling_progress_bar"
+                        style="?android:attr/progressBarStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="157dp"
+                        android:layout_marginTop="149dp"
+                        android:layout_marginEnd="147dp" />
+
+
+                </RelativeLayout>
+
+            </ScrollView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/couns_save_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_change_password_btn"
+        android:fontFamily="@font/roboto_regular"
+        android:text="        Save Counseling        "
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="@+id/cardView4"
+        app:layout_constraintStart_toStartOf="@+id/cardView4"
+        app:layout_constraintTop_toBottomOf="@+id/cardView4"
+        />
+
+</android.support.constraint.ConstraintLayout>

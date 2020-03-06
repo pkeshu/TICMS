@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="16dp">
+
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.widget.LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="#efebeb"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TextView
+                android:id="@+id/custom_alert_notificaton_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="Notification"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/custom_slert_notificaton_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/roboto_regular"
+                android:padding="16dp"
+                android:textColor="#000000" />
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <!--<Button-->
+                <!--android:id="@+id/close_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:gravity="center"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:background="@drawable/button_background"-->
+                <!--android:text="Close" />-->
+
+                <Button
+                    android:id="@+id/edit_notification_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/button_background"
+                    android:gravity="center"
+                    android:text="Close"
+                    android:textColor="@color/colorWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <TextView
+                    android:id="@+id/reply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="Reply"
+                    android:textColor="@color/colorfade"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintBottom_toBottomOf="@+id/edit_notification_button"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/edit_notification_button"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.086"
+                    android:visibility="gone"/>
+                <!--<Button-->
+                <!--android:id="@+id/delete_notification_button"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:background="@drawable/button_background"-->
+                <!--android:text="Delete" />-->
+                <!--<Button-->
+                <!--android:id="@+id/reply_notification_btn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:visibility="visible"-->
+                <!--android:layout_marginLeft="16dp"-->
+                <!--android:layout_marginRight="16dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textColor="@color/colorWhite"-->
+                <!--android:background="@drawable/button_background"-->
+                <!--android:text="Reply"-->
+                <!--/>-->
+            </android.support.constraint.ConstraintLayout>
+
+
+        </android.widget.LinearLayout>
+
+    </android.widget.RelativeLayout>
+</android.support.v7.widget.CardView>

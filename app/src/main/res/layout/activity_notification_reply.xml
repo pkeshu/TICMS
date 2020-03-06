@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_layout"
+    tools:context=".Notification.PushNotification.NotificationReply.NotificationReply">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/constraintLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="Notification Title"
+            android:textAlignment="center"
+            android:textColor="@color/colorfade"
+            android:textSize="14sp"
+            android:padding="4dp"
+            android:background="@drawable/noti_show_draw"
+            app:layout_constraintBottom_toTopOf="@+id/reply_notification_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/reply_notification_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:paddingTop="56dp"
+            android:paddingBottom="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:listitem="@layout/custom_reply_noti_item">
+
+        </android.support.v7.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/your_message"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/noti_show_draw"
+                android:fontFamily="@font/roboto_regular"
+                android:gravity="left|top"
+                android:hint="Type your message"
+                android:inputType="textMultiLine"
+                android:padding="@dimen/fab_margin"
+                android:scrollbars="vertical"
+                android:scrollHorizontally="false"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+<!--<<<<<<< HEAD-->
+                <!--app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--=======-->
+                <!--app:cardCornerRadius="2dp"-->
+                <!--android:layout_marginTop="2dp"-->
+                <!--android:background="@drawable/noti_show_draw">-->
+                <!--<EditText-->
+                    <!--android:id="@+id/your_message"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="110dp"-->
+                    <!--android:layout_marginBottom="2dp"-->
+                    <!--android:fontFamily="@font/roboto_regular"-->
+                    <!--android:hint="Type your message"-->
+                    <!--android:inputType="textMultiLine"-->
+                    <!--android:gravity="left|top"-->
+                    <!--android:scrollbars="vertical"-->
+                    <!--android:scrollHorizontally="false"-->
+                    <!--android:padding="@dimen/fab_margin"-->
+                    <!--android:maxLength="1000"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:background="@drawable/noti_show_draw"-->
+                    <!--/>-->
+
+            <!--</android.support.v7.widget.CardView>-->
+<!--&gt;>>>>>> keshar-->
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:src="@drawable/ic_sent_noti"
+                app:layout_constraintBottom_toBottomOf="@+id/your_message"
+                app:layout_constraintEnd_toEndOf="@+id/your_message"
+                app:layout_constraintHorizontal_bias="0.97"
+                app:layout_constraintStart_toStartOf="@+id/your_message"
+                app:layout_constraintTop_toTopOf="@+id/your_message" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+

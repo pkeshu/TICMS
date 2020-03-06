@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.imaginology.texas">
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".UpdateDiloge.UpdateDialog"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Notification.sendNotification.TeamListActivity"></activity>
+        <activity android:name=".Notification.PushNotification.EditNotification" />
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Users.UserDetails"
+            android:label="@string/title_activity_details"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CurrentUserProfileActivity"
+            android:label="User"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <service android:name=".Notification.PushNotification.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+
+            <!--
+     Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+            -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_icon"
+                android:resource="@drawable/logo" />
+            <!--
+                 Set color used with incoming notification messages. This is used when no color is set for the incoming
+                 notification message. See README(https://goo.gl/6BKBk7) for more.
+            -->
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_color"
+                android:resource="@color/colorAccent" />
+            <meta-data
+                android:name="com.google.firebase.messaging.default_notification_channel_id"
+                android:value="@string/default_notification_channel_id" />
+        </service>
+
+        <activity
+            android:name=".Notification.PushNotification.AllNotification"
+            android:label="@string/title_activity_all_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Students.StudentDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Teachers.TeacherDetails"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notification.sendNotification.SendNotificationActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".Notification.PushNotification.NotificationDetail"
+            android:label="@string/title_activity_notification_detail"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Settings"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Counseling.CounselingDetail.CounselingDetail"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver
+            android:name=".Notification.OfflineNotification.RoutineNotificationReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".Notification.OfflineNotification.MorningRoutineServiceStartReceiver"
+            android:enabled="true"
+            android:exported="true" />
+
+        <service
+            android:name=".Notification.OfflineNotification.RoutineNotificationService"
+            android:enabled="true"
+            android:exported="false" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.imaginology.texas.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".SplashScreen.SplashScreenActivity"
+            android:hardwareAccelerated="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Notification.PushNotification.NotificationReply.NotificationReply"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".Team.AddingMemberInTeam.AddMemberInTeamActivity" />
+        <activity android:name=".Team.TeamDetails.TeamDetails" />
+        <activity android:name=".Counseling.ProcessCounseling.CounselStudent" />
+        <activity android:name=".Counseling.EditCounseling.EditCounselingActivity" />
+        <activity android:name=".Counseling.ProcessCounseling.ShowHistoryActivity" />
+        <activity android:name=".Notification.PrivateMessage.PrivateMessageActivity" />
+    </application>
+
+</manifest>
